@@ -1,0 +1,374 @@
+@font-face {
+    font-family: shabnam;
+    src: url(../webfonts/Shabnam.ttf);
+}
+
+@font-face {
+    font-family: vazir;
+    src: url(../webfonts/Vazir.ttf);
+}
+
+*{
+    direction: rtl;
+    font-family: shabnam;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+body{
+    font-size: 16px;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+#slide1{
+    background: linear-gradient( #37A489,#2FADB5);
+}
+
+/* Products */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.wrapper a img {
+   border-radius:0.3rem ;
+   transition: all 0.4s ease;
+}
+
+.wrapper a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* End Products */
+
+/* Contact Us Map */
+#map iframe {
+    width: 100%;
+    height: 25rem;
+}
+/* End Contact Us Map */
+
+/* Single Product Image Slider */
+.mycontainer{
+    display: flex;
+    width: 25rem;
+    margin: auto;
+   margin-bottom: 3rem;
+}
+
+.panel{
+background-size: auto 100%;
+background-position: center;
+background-repeat: no-repeat;
+height: 20vh;
+border-radius: 50px;
+cursor: pointer;
+color: white;
+flex: 0.5;
+margin: 10px;
+position: relative;
+transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3 ease-in 0.5s;
+}
+@media(max-width: 560px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+/*End Single Product Image Slider */
+
+/* Tsvie hesab */
+
+.order-details-desc ul {
+    list-style-type: none;
+    padding: 2rem;
+}
+.order-details-desc ul li {
+    font-weight: 900;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+}
+.order-details-desc ul li span {
+    float: left;
+    font-weight: 300;
+}
+/* End Tasviehesab */
+
+/*----- Sabad page ------*/
+#cart-page-table thead tr th {
+    background: #1d8d60 !important;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+}
+#cart-page-table .product-thumbnail img {
+    width: 5rem;
+}
+.cart-total-desc h3 {
+    background-color: #1d8d60;
+    color: white;
+    padding: 1rem 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.cart-total-desc ul {
+    list-style-type: none;
+    padding: 2rem;
+}
+.cart-total-desc ul li {
+    font-weight: 900;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+}
+.cart-total-desc ul li span {
+    float: left;
+    font-weight: 300;
+}
+/* End Sabad Page */
+
+/* COunter Sabad Kharid */
+.section-count{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.counter{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.decrement-btn {
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    background-color: #2e8d46;
+    border: 2px solid #2e8d46;
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.increment-btn{
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    background-color: #2e8d46;
+    border: 2px solid #2e8d46;
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter-value {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 0, 0, 0.187);  
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+/* End COunter Sabad Kharid */
+
+/* Filter */
+.rangeslider {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.myslider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #e0e0e0;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+    border-radius: 10px;
+}
+
+.myslider:hover {
+    opacity: 1;
+}
+
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background .3s ease-in-out;
+}
+
+.myslider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background .3s ease-in-out;
+}
+
+.myslider::-webkit-slider-thumb:hover {
+    background: #45a049;
+}
+
+.myslider::-moz-range-thumb:hover {
+    background: #45a049;
+}
+
+h1 {
+    text-align: center;
+    color: #34495E;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #34495E;
+}
+
+#demo {
+    font-weight: bold;
+    color: #4CAF50;
+}
+/* End Filter */
+
+/* Header */
+.header{
+    background:linear-gradient(to left,#226032,#28A5B8);
+}
+/* End Header */
+/* Footer */
+.footer{
+    background:linear-gradient(to right,#42B28F,#2A9D9D);
+}
+/* End Footer */
+
+/* moshavere background */
+#moshavere {
+    background: linear-gradient(to right,#317075,#26A592);
+}
+/* End moshavere background */
+
+/* ----------------------------------------------------- */
+
+
+  /* ----------------------------------------------------- */
+    .maindiv{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+  #mydiv{
+    border: 5px solid;
+    border-color: #226032;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    margin-right: 3.4rem;
+  }
+
+  #mydiv2{
+    border: 5px solid;
+    position: absolute;
+    right: 1rem;
+    top:1rem;
+    border-color: #ba1aba;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #mydiv3{
+    border: 5px solid;
+    border-color: #226032;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 3.4rem;
+  }
+  #mydiv4{
+    border: 5px solid;
+    position: absolute;
+    left: 1rem;
+    top:1rem;
+    border-color: #ba1aba;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* colorfeatures */
+  .colorfeatures{
+    background-color: #1a2053;
+  }
+  /* End colorfeatures */
+
+/* Gallery Color */
+.gallerycolor{
+    background: linear-gradient(#377346,#2D5D4F);
+
+}
+
+.infotext{
+    margin-top: 13rem;
+    font-family: vazir;
+    font-size: 2.5rem;
+}
+
+.mybtn{
+    margin: auto;
+    display: table;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+/* End Gallery Color */
